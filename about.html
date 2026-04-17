@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about BEEJ - Our mission to provide premium natural superfoods for your wellness journey.">
+    <title>About Us - BEEJ</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C5F2D',
+                        secondary: '#8B7355',
+                        accent: '#D4A574',
+                        cream: '#F5F1E8',
+                        earth: '#97866B'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="logo-text text-2xl md:text-3xl font-serif font-bold text-primary">
+                    BEEJ
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-primary transition">Shop</a>
+                    <a href="about.html" class="nav-link text-primary font-semibold">About</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="relative text-gray-700 hover:text-primary transition" id="cartIcon">
+                        <i class="fas fa-shopping-bag text-xl"></i>
+                        <span id="cartCount" class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    
+                    <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobileMenu" class="mobile-menu md:hidden">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-primary transition border-b">Home</a>
+                <a href="products.html" class="block py-3 text-gray-700 hover:text-primary transition border-b">Shop</a>
+                <a href="about.html" class="block py-3 text-primary font-semibold border-b">About</a>
+                <a href="contact.html" class="block py-3 text-gray-700 hover:text-primary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-cream to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
+                    About BEEJ
+                </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Root. Rise. Refine. - Our journey to bring nature's finest to your table.
+                </p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Our Story -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
+                    Our Story
+                </h2>
+
+                <p class="text-gray-600 mb-4">
+                    BEEJ didn’t begin as a business — it began as a belief. A belief that the smallest elements of nature carry the greatest power, and that true wellness starts by going back to the roots.
+                </p>
+
+                <p class="text-gray-600 mb-4">
+                    The name “BEEJ”, meaning seed, reflects the origin of all growth — simple, pure, and full of potential. With this philosophy, we set out to bring clean, nutrient-rich seeds into everyday lifestyles without compromise.
+                </p>
+
+                <p class="text-gray-600 mb-4">
+                    We work closely with trusted farms to source the highest quality seeds, ensuring minimal processing so that every nutrient remains intact. No shortcuts, no additives — just honest superfoods, exactly as nature intended.
+                </p>
+
+                <p class="text-gray-600">
+                    Today, BEEJ stands for mindful living, transparency, and uncompromised quality — helping you make better choices, one seed at a time.
+                </p>
+            </div>
+            
+            <div class="fade-in-right">
+                <img src="images/hero/hero1.png" alt="BEEJ Story" class="rounded-lg shadow-xl">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Our Values -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+                    Our Values
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    The principles that guide everything we do
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md fade-in">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">100% Natural</h3>
+                    <p class="text-gray-600">
+                        We believe in keeping things pure. No additives, no preservatives, no artificial anything. Just nature's goodness in every pack.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md fade-in delay-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-handshake text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">Transparency</h3>
+                    <p class="text-gray-600">
+                        From farm to table, we maintain complete transparency. You deserve to know exactly what you're consuming and where it comes from.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md fade-in delay-200">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">Sustainability</h3>
+                    <p class="text-gray-600">
+                        We're committed to sustainable sourcing and eco-friendly packaging. Good for you, good for the planet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Promise -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in order-2 md:order-1">
+                    <img src="images/hero/hero2.png" alt="BEEJ Promise" class="rounded-lg shadow-xl">
+                </div>
+                
+                <div class="fade-in-right order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
+                        Our Promise to You
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Premium Quality</h4>
+                                <p class="text-gray-600">Every batch is tested for quality, freshness, and purity before reaching you.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Ethical Sourcing</h4>
+                                <p class="text-gray-600">We partner with farmers who share our commitment to sustainable and ethical practices.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Customer Satisfaction</h4>
+                                <p class="text-gray-600">Your health and happiness are our top priorities. Not satisfied? We'll make it right.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Freshness Guarantee</h4>
+                                <p class="text-gray-600">From packaging to delivery, we ensure maximum freshness in every order.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">
+                Join the BEEJ Family
+            </h2>
+            <p class="text-lg mb-8 opacity-90">
+                Start your wellness journey with our premium superfoods today
+            </p>
+            <a href="products.html" class="btn-white">
+                Shop Now
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">BEEJ</h3>
+                    <p class="text-gray-400 mb-4">Root. Rise. Refine.</p>
+                    <p class="text-gray-400 text-sm">
+                        Premium natural superfoods for your health and wellness.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="products.html" class="hover:text-white transition">Chia Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Flax Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Sunflower Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Pumpkin Seeds</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/beejstore.in?igsh=MWttaTJ5dnZjbmt0ag==" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbCZwGo0LKZ8BrXXbu1s" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Email: beej.store.in@gmail.com<br>
+                        Phone: +91  83191 43976                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 BEEJ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3 class="text-xl font-bold">Shopping Cart</h3>
+            <button id="closeCart" class="text-2xl">&times;</button>
+        </div>
+        
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-semibold">Total:</span>
+                <span id="cartTotal" class="text-xl font-bold text-primary">₹0</span>
+            </div>
+            <button id="whatsappOrder" class="btn-primary w-full mb-2">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Order on WhatsApp
+            </button>
+            <button id="clearCart" class="btn-secondary w-full">
+                Clear Cart
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

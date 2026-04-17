@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact BEEJ - Get in touch with us for queries, support, or wholesale inquiries.">
+    <title>Contact Us - BEEJ</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C5F2D',
+                        secondary: '#8B7355',
+                        accent: '#D4A574',
+                        cream: '#F5F1E8',
+                        earth: '#97866B'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="logo-text text-2xl md:text-3xl font-serif font-bold text-primary">
+                    BEEJ
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-primary transition">Shop</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-primary transition">About</a>
+                    <a href="contact.html" class="nav-link text-primary font-semibold">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="relative text-gray-700 hover:text-primary transition" id="cartIcon">
+                        <i class="fas fa-shopping-bag text-xl"></i>
+                        <span id="cartCount" class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    
+                    <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobileMenu" class="mobile-menu md:hidden">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-primary transition border-b">Home</a>
+                <a href="products.html" class="block py-3 text-gray-700 hover:text-primary transition border-b">Shop</a>
+                <a href="about.html" class="block py-3 text-gray-700 hover:text-primary transition border-b">About</a>
+                <a href="contact.html" class="block py-3 text-primary font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-cream to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
+                    Get In Touch
+                </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="fade-in">
+                    <h2 class="text-2xl font-serif font-bold text-primary mb-6">Send Us a Message</h2>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Your Name *</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Email Address *</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="+91 98765 43210">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Subject *</label>
+                            <select id="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="product">Product Question</option>
+                                <option value="order">Order Support</option>
+                                <option value="wholesale">Wholesale Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Message *</label>
+                            <textarea id="message" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    
+                    <div id="formMessage" class="mt-4 hidden"></div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="fade-in-right">
+                    <h2 class="text-2xl font-serif font-bold text-primary mb-6">Contact Information</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <p class="text-gray-600">beej.store.in@gmail.com</p>
+                                <p class="text-gray-600">support@beej.store</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-phone text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Phone</h4>
+                                <p class="text-gray-600">+91  83191 43976</p>
+                                <p class="text-gray-600 text-sm">Mon-Sat: 9:00 AM - 6:00 PM IST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fab fa-whatsapp text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">WhatsApp</h4>
+                                <p class="text-gray-600">+91  83191 43976 </p>
+                                <a href="https://wa.me/8319143976" class="text-primary hover:underline text-sm">
+                                    Chat with us on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Address</h4>
+                                <p class="text-gray-600">
+                                    BEEJ Foods Pvt. Ltd.<br>
+                                    Indore, Madhya Pradesh<br>
+                                    India - 452001
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Hours -->
+                    <div class="mt-8 p-6 bg-cream rounded-lg">
+                        <h3 class="font-semibold mb-4">Business Hours</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Monday - Friday</span>
+                                <span class="font-medium">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Saturday</span>
+                                <span class="font-medium">10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sunday</span>
+                                <span class="font-medium">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600">Quick answers to common questions</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-semibold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-primary mr-2"></i>
+                        How do I place an order?
+                    </h4>
+                    <p class="text-gray-600 text-sm ml-6">
+                        Browse our products, add them to your cart, and complete the checkout process. You can also order directly via WhatsApp for a personalized experience.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-semibold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-primary mr-2"></i>
+                        What is your shipping policy?
+                    </h4>
+                    <p class="text-gray-600 text-sm ml-6">
+                        We offer free shipping on orders above ₹500. Standard delivery takes 3-5 business days. Express shipping is available at additional cost.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-semibold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-primary mr-2"></i>
+                        Do you offer bulk/wholesale orders?
+                    </h4>
+                    <p class="text-gray-600 text-sm ml-6">
+                        Yes! We offer special pricing for bulk orders. Please contact us at wholesale@beej.store or call us for more details.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-semibold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-primary mr-2"></i>
+                        What is your return policy?
+                    </h4>
+                    <p class="text-gray-600 text-sm ml-6">
+                        We offer a 100% satisfaction guarantee. If you're not happy with your purchase, contact us within 7 days for a full refund or replacement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">BEEJ</h3>
+                    <p class="text-gray-400 mb-4">Root. Rise. Refine.</p>
+                    <p class="text-gray-400 text-sm">
+                        Premium natural superfoods for your health and wellness.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="products.html" class="hover:text-white transition">Chia Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Flax Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Sunflower Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Pumpkin Seeds</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/beejstore.in?igsh=MWttaTJ5dnZjbmt0ag==" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbCZwGo0LKZ8BrXXbu1s" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Email: beej.store.in@gmail.com<br>
+                        Phone: +91 8319143976                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 BEEJ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3 class="text-xl font-bold">Shopping Cart</h3>
+            <button id="closeCart" class="text-2xl">&times;</button>
+        </div>
+        
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-semibold">Total:</span>
+                <span id="cartTotal" class="text-xl font-bold text-primary">₹0</span>
+            </div>
+            <button id="whatsappOrder" class="btn-primary w-full mb-2">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Order on WhatsApp
+            </button>
+            <button id="clearCart" class="btn-secondary w-full">
+                Clear Cart
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

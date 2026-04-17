@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BEEJ - Premium natural seeds for health and wellness. Root. Rise. Refine. Shop chia seeds, flax seeds, and more superfoods.">
+    <meta name="keywords" content="chia seeds, flax seeds, superfoods, healthy seeds, natural nutrition, BEEJ">
+    <title>BEEJ - Root. Rise. Refine. | Premium Superfoods</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C5F2D',
+                        secondary: '#8B7355',
+                        accent: '#D4A574',
+                        cream: '#F5F1E8',
+                        earth: '#97866B'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    
+    <!-- Loading Animation -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">BEEJ</div>
+            <div class="loader-text">Root. Rise. Refine.</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="logo-text text-2xl md:text-3xl font-serif font-bold text-primary">
+                    BEEJ
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-primary transition">Shop</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-primary transition">About</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                
+                <!-- Right Icons -->
+                <div class="flex items-center space-x-4">
+                    <button class="relative text-gray-700 hover:text-primary transition" id="cartIcon">
+                        <i class="fas fa-shopping-bag text-xl"></i>
+                        <span id="cartCount" class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu md:hidden">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-primary transition border-b">Home</a>
+                <a href="products.html" class="block py-3 text-gray-700 hover:text-primary transition border-b">Shop</a>
+                <a href="about.html" class="block py-3 text-gray-700 hover:text-primary transition border-b">About</a>
+                <a href="contact.html" class="block py-3 text-gray-700 hover:text-primary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative pt-20 md:pt-24">
+        <div class="container mx-auto px-4 py-12 md:py-24">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="fade-in">
+                    <h1 class="text-4xl md:text-6xl font-serif font-bold text-primary mb-4 leading-tight">
+                        Root. Rise. <br>Refine.
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8">
+                        Unlock the concentrated power of nature with BEEJ's premium superfoods. Pure, natural, and packed with nutrients for your wellness journey.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="products.html" class="btn-primary">
+                            Shop Now
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="about.html" class="btn-secondary">
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="mt-12 flex flex-wrap gap-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            100% Natural
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-leaf text-green-600 mr-2"></i>
+                            Chemical Free
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-green-600 mr-2"></i>
+                            Quality Assured
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image fade-in-right">
+                    <img src="images/hero/hero1.png" alt="BEEJ Sunflower Seeds" class="w-full rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+                    Our Superfoods
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Discover our collection of premium seeds, carefully selected and processed to preserve their natural goodness.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="featuredProducts">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+                    Why Choose BEEJ?
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Nature's power, scientifically proven benefits, delivered with care.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">100% Natural</h3>
+                    <p class="text-gray-600">
+                        No additives, no preservatives. Just pure, natural seeds straight from nature to you.
+                    </p>
+                </div>
+                
+                <div class="benefit-card fade-in delay-100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">Rich in Nutrients</h3>
+                    <p class="text-gray-600">
+                        Packed with omega-3, fiber, protein, and essential vitamins for complete nutrition.
+                    </p>
+                </div>
+                
+                <div class="benefit-card fade-in delay-200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">Quality Assured</h3>
+                    <p class="text-gray-600">
+                        Rigorously tested and certified to meet the highest quality standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits -->
+    <section class="py-16 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <img src="images/hero/hero2.png" alt="BEEJ Seeds Benefits" class="rounded-lg shadow-xl">
+                </div>
+                
+                <div class="fade-in-right">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
+                        Unlock Concentrated Nutrition
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Boost Hydration</h4>
+                                <p class="text-gray-600">Chia seeds can absorb up to 12 times their weight in water, keeping you hydrated longer.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Support Digestion</h4>
+                                <p class="text-gray-600">High fiber content promotes healthy digestion and gut health.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Increase Energy</h4>
+                                <p class="text-gray-600">Natural source of sustained energy for your active lifestyle.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Heart Health</h4>
+                                <p class="text-gray-600">Rich in omega-3 fatty acids that support cardiovascular wellness.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="products.html" class="btn-primary mt-8 inline-block">
+                        Explore Products
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+                    What Our Customers Say
+                </h2>
+                <p class="text-gray-600">Real experiences from real people</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card fade-in">
+                    <div class="mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        "The quality of BEEJ's chia seeds is outstanding! I've noticed a significant improvement in my energy levels and digestion."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-semibold">PR</span>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">Priya Sharma</h5>
+                            <p class="text-sm text-gray-500">Wellness Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in delay-100">
+                    <div class="mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        "Best superfood brand I've tried! The flax seeds are fresh and have helped me with my fitness goals."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-semibold">AR</span>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">Arjun Patel</h5>
+                            <p class="text-sm text-gray-500">Fitness Coach</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in delay-200">
+                    <div class="mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        "Love the packaging and the product quality! BEEJ has become a staple in my daily nutrition routine."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-semibold">SG</span>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">Sneha Gupta</h5>
+                            <p class="text-sm text-gray-500">Health Blogger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">
+                Ready to Start Your Wellness Journey?
+            </h2>
+            <p class="text-lg mb-8 opacity-90">
+                Experience the power of natural superfoods with BEEJ
+            </p>
+            <a href="products.html" class="btn-white">
+                Shop Now
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">BEEJ</h3>
+                    <p class="text-gray-400 mb-4">Root. Rise. Refine.</p>
+                    <p class="text-gray-400 text-sm">
+                        Premium natural superfoods for your health and wellness.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="products.html" class="hover:text-white transition">Chia Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Flax Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Sunflower Seeds</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Pumpkin Seeds</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/beejstore.in?igsh=MWttaTJ5dnZjbmt0ag==" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbCZwGo0LKZ8BrXXbu1s" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Email: beej.store.in@gmail.com<br>
+                        Phone: +91  83191 43976
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 BEEJ. All rights reserved. | Made with <i class="fas fa-heart text-red-500"></i> for wellness</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3 class="text-xl font-bold">Shopping Cart</h3>
+            <button id="closeCart" class="text-2xl">&times;</button>
+        </div>
+        
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-semibold">Total:</span>
+                <span id="cartTotal" class="text-xl font-bold text-primary">₹0</span>
+            </div>
+            <button id="whatsappOrder" class="btn-primary w-full mb-2">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Order on WhatsApp
+            </button>
+            <button id="clearCart" class="btn-secondary w-full">
+                Clear Cart
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
