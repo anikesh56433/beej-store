@@ -199,11 +199,12 @@ class ShoppingCart {
         message += '━━━━━━━━━━━━━━━%0A';
         message += `*Total Amount: ₹${this.getTotal()}*%0A%0A`;
         message += 'Please confirm your delivery address and we will process your order.';
-        
-        const phoneNumber = '8319143976'; // Replace with actual WhatsApp number
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-        
-        window.open(whatsappURL, '_blank');
+
+        const phoneNumber = '918319143976';
+        const message = "Hi, I want to order from BEEJ";
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      
     }
     
     showNotification(message) {
